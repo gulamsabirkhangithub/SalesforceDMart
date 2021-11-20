@@ -1,0 +1,55 @@
+.page-border{
+    border: 6px solid black;
+}
+
+.product-name-rec{
+    font-size: 12px;
+    font-family: "Proxima Nova";
+    color: dodgerblue;
+}
+.product-font-rec{
+    font-size: 12px;
+    font-family: "Proxima Nova";
+    color: #444444;
+}
+
+.stock-font-rec{
+    font-size: 14px;
+    font-family: "Proxima Nova";
+    color: rgba(0, 128, 0, 0.836);
+    font-weight: 800;
+}
+.quntity-font-rec {
+    border: 1px solid #d9d9d9;
+    width: 30px;
+    margin-top: -40px;
+    font-size: 12px;
+    font-family: "Proxima Nova";
+}
+
+.other-font-rec {
+    margin-top: -40px;
+    font-size: 12px;
+    color: #444444;
+    font-family: "Proxima Nova";
+}
+
+.other-font-rec2 {
+    margin-top: -30px;
+    font-size: 12px;
+    color: #444444;
+    font-family: "Proxima Nova";
+}
+
+.other-font-rec1 {
+    font-size: 12px;
+    color: #444444;
+    font-family: "Proxima Nova";
+}
+
+.header-font {
+    font-size: 12px;
+    color: #444444;
+    font-family: "Proxima Nova";
+}
+

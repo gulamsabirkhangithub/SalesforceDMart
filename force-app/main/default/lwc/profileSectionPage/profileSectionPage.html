@@ -1,0 +1,115 @@
+<!--Page Name: profileSectionPage.html
+    Created by : Gulam Sabir Khan
+    Date: 18-11-2021
+    Description: For D-Mart Mockup
+-->
+<template>
+    <div class="profile-alignment">
+        <img src={backrgroudImageUrl} class="backround-image"/>
+
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col">
+                <img src={proflieImageUrl} class="profile_image"/>
+            </div>
+            <div class="slds-col">
+                <p class="cont-name">Gulam Sabir Khan  <lightning-button-menu>
+                    <lightning-menu-item value="change" label="Change profile photo"></lightning-menu-item>
+                    <lightning-menu-item value="changeBackground" label="Change background photo"></lightning-menu-item>
+                </lightning-button-menu></p>
+                <p class="cont-font-rec">India, Kolkata</p>
+            </div>
+        </div>     
+        <div class="slds-grid slds-wrap" style="margin-top: 20px;">
+            <div class="slds-col" style="text-align: center">
+                <lightning-icon icon-name="standard:opportunity" size="small"></lightning-icon> 
+            </div>
+            <div class="slds-col">
+                <p class="cont-font-rec"> <b>Platinum</b></p>
+                <p class="cont-font-rec">MyNTO status</p>
+            </div>
+            <div class="vl"></div>
+
+            <div class="slds-col"  style="text-align:center">
+                <lightning-icon icon-name="utility:cart" size="small"></lightning-icon> 
+            </div>
+            <div class="slds-col">
+                <p class="cont-font-rec"><b>58,87655</b></p>
+                <p class="cont-font-rec">Lifetime Value</p>
+            </div>
+        </div>     
+        <div class="slds-box">
+            <div class="cont-font-rec"> <b>Risk of Churn:</b> Low </div><br/>
+            <div class="slds-progress-bar slds-progress-bar_circular" aria-valuemin="0" aria-valuemax="100" aria-valuenow="75" role="progressbar">
+                <span class="slds-progress-bar__value">
+                    <span class="slds-assistive-text">Progress: 75%</span>
+                </span>
+            </div>
+            <div class="cont-font-rec">This customer is highly active and engaged with your brand</div>
+        </div>
+
+        <div style="margin-top: 10px;margin-left: 14px;">
+            <lightning-tabset>
+                <lightning-tab label="Details">
+                    <lightning-card title="Contact" icon-name="standard:contact">
+                        <div style="margin-left: 15px;" class="cont-font-rec">
+                            <lightning-record-view-form record-id="0035j000008uhV4AAI" object-api-name="Contact">
+                                <lightning-layout>
+                                    <lightning-layout-item size="6">
+                                        <lightning-output-field field-name="Name"></lightning-output-field>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item size="6">
+                                        <lightning-output-field field-name="Title"></lightning-output-field>
+                                    </lightning-layout-item>
+                                </lightning-layout>
+                                <lightning-layout>
+                                    <lightning-layout-item size="6">
+                                        <lightning-output-field field-name="Email"></lightning-output-field>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item size="6">
+                                        <lightning-output-field field-name="Phone"></lightning-output-field>
+                                    </lightning-layout-item>
+                                </lightning-layout>
+                                <lightning-layout>
+                                    <lightning-layout-item size="12">
+                                        <div style="line-height: 16.6px;">
+                                            <lightning-output-field field-name="MailingAddress"></lightning-output-field>
+                                        </div>
+                                    </lightning-layout-item>
+                                </lightning-layout>
+
+                                <lightning-layout>
+                                    <lightning-layout-item size="6">
+                                        <lightning-output-field field-name="Account_Number__c"></lightning-output-field>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item size="6">
+                                        <lightning-output-field field-name="Customer_Since__c"></lightning-output-field>
+                                    </lightning-layout-item>
+                                </lightning-layout>    
+                                <lightning-layout>
+                                    <lightning-layout-item size="6">
+                                        <lightning-output-field field-name="Birthdate"></lightning-output-field>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item size="6">
+                                        <lightning-output-field field-name="My_NTO_Balance__c"></lightning-output-field>
+                                    </lightning-layout-item>
+                                </lightning-layout>   
+                                <lightning-layout>
+                                    <lightning-layout-item size="6">
+                                        <lightning-output-field field-name="Birthdate"></lightning-output-field>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item size="6">
+                                        <lightning-output-field field-name="My_NTO_Balance__c"></lightning-output-field>
+                                    </lightning-layout-item>
+                                </lightning-layout>                              
+                                </lightning-record-view-form>
+                            </div>
+                    </lightning-card>
+                </lightning-tab>
+                <lightning-tab label="Activity">
+                </lightning-tab>
+                <lightning-tab label="Action">
+                </lightning-tab>
+            </lightning-tabset>
+        </div>  
+    </div>
+</template>

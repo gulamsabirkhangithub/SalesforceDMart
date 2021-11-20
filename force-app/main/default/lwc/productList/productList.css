@@ -1,0 +1,16 @@
+.product-cart-icon{
+    margin-left: 92px;
+}
+
+.product-icon{
+    height: 55px;
+    width: 60px;
+    border-radius: 15px;
+}
+
+
+.product-font{
+    font-size: 12px;
+    color: dodgerblue;
+    font-family: "Proxima Nova";
+}

@@ -1,0 +1,13 @@
+.alignment {
+  margin-top: -12px;
+  margin-left: -12px;
+  margin-right: -10px;
+  margin-bottom: -11px;
+  border: 2px solid black
+}
+
+.content-alignment {
+  margin-top: -25px;
+  margin-left: -1px;
+  margin-right: -1px;
+}

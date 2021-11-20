@@ -1,0 +1,255 @@
+<!--Page Name: profileOrderList.html
+    Created by : Gulam Sabir Khan
+    Date: 18-11-2021
+    Description: For D-Mart Mockup
+-->
+<template>
+    <div class="page-border">
+        <lightning-tabset>
+            <lightning-tab label="ORDERS">
+                <table class="slds-table slds-table_bordered slds-max-medium-table_stacked-horizontal slds-table_fixed-layout">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th  scope="col">
+                                <div class="table-header-label slds-align_absolute-center header-font" title="PRODUCT">PRODUCT</div>
+                            </th>
+                            <th></th>
+                            <th  scope="col">
+                                <div class="table-header-label slds-align_absolute-center header-font" title="QUANTITY">QUANTITY</div>
+                            </th>
+                            <th  scope="col">
+                                <div class="table-header-label slds-align_absolute-center header-font" title="DATE ADDED">DATE ADDED</div>
+                            </th>
+                            <th  scope="col">
+                                <div class="table-header-label slds-align_absolute-center header-font" title="PRICE">PRICE</div>
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={columns} for:item="item" for:index="indexVar">
+                            <tr key={item.label}>
+                                <td>
+                                    <span style="display: inline-block; margin-right:10px;"><img src={item.image}></span>
+                                </td>
+                                <td>
+                                    <p class="product-name-rec">{item.label}</p>
+                                    <p class="product-font-rec">Size: <b>{item.size}</b></p>
+                                    <p class="product-font-rec">Color: <b>{item.color}</b></p>
+                                    <p class="product-font-rec">Item No: <b>{item.itemNo}</b></p>
+                                    <p class="stock-font-rec">{item.stock}</p>
+                                </td>
+                                <td>
+                                    <div class="slds-align_absolute-center quntity-font-rec">
+                                        {item.quantity}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="slds-align_absolute-center other-font-rec">
+                                        {item.dateAdded}
+                                    </div>
+                                </td>
+                                <td>
+                                    <p class="slds-align_absolute-center other-font-rec2">{item.price}</p>                                                                                   
+                                    <p style="text-decoration: line-through;" class="slds-align_absolute-center other-font-rec2">{item.discountPrice}</p>
+                                </td>
+                                <td>
+                                    <div class="slds-align_absolute-center other-font-rec">
+                                    <lightning-button-menu>
+                                        <lightning-menu-item value="change" label="Remove"></lightning-menu-item>
+                                        <lightning-menu-item value="changeBackground" label="Buy"></lightning-menu-item>
+                                    </lightning-button-menu>
+                                    </div>
+                                </td>
+
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </lightning-tab>
+            <lightning-tab label="IN CART">
+                <table class="slds-table slds-table_bordered slds-max-medium-table_stacked-horizontal slds-table_fixed-layout">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th  scope="col">
+                                <div class="table-header-label slds-align_absolute-center header-font" title="PRODUCT">PRODUCT</div>
+                            </th>
+                            <th></th>
+                            <th  scope="col">
+                                <div class="table-header-label slds-align_absolute-center header-font" title="QUANTITY">QUANTITY</div>
+                            </th>
+                            <th  scope="col">
+                                <div class="table-header-label slds-align_absolute-center header-font" title="DATE ADDED">DATE ADDED</div>
+                            </th>
+                            <th  scope="col">
+                                <div class="table-header-label slds-align_absolute-center header-font" title="PRICE">PRICE</div>
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={columns} for:item="item" for:index="indexVar">
+                            <tr key={item.label}>
+                                <td>
+                                    <span style="display: inline-block; margin-right:10px;"><img src={item.image}></span>
+                                </td>
+                                <td>
+                                    <p class="product-name-rec">{item.label}</p>
+                                    <p class="product-font-rec">Size: <b>{item.size}</b></p>
+                                    <p class="product-font-rec">Color: <b>{item.color}</b></p>
+                                    <p class="product-font-rec">Item No: <b>{item.itemNo}</b></p>
+                                    <p class="stock-font-rec">{item.stock}</p>
+                                </td>
+                                <td>
+                                    <div class="slds-align_absolute-center quntity-font-rec">
+                                        {item.quantity}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="slds-align_absolute-center other-font-rec">
+                                        {item.dateAdded}
+                                    </div>
+                                </td>
+                                <td>
+                                    <p class="slds-align_absolute-center other-font-rec2">{item.price}</p>                                                                                   
+                                    <p style="text-decoration: line-through;" class="slds-align_absolute-center other-font-rec2">{item.discountPrice}</p>
+                                </td>
+                                <td>
+                                    <div class="slds-align_absolute-center other-font-rec">
+                                    <lightning-button-menu>
+                                        <lightning-menu-item value="change" label="Remove"></lightning-menu-item>
+                                        <lightning-menu-item value="changeBackground" label="Buy"></lightning-menu-item>
+                                    </lightning-button-menu>
+                                    </div>
+                                </td>
+
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </lightning-tab>
+            <lightning-tab label="WHISHLIST">
+                <table class="slds-table slds-table_bordered slds-max-medium-table_stacked-horizontal slds-table_fixed-layout">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th  scope="col">
+                                <div class="table-header-label slds-align_absolute-center header-font" title="PRODUCT">PRODUCT</div>
+                            </th>
+                            <th></th>
+                            <th  scope="col">
+                                <div class="table-header-label slds-align_absolute-center header-font" title="QUANTITY">QUANTITY</div>
+                            </th>
+                            <th  scope="col">
+                                <div class="table-header-label slds-align_absolute-center header-font" title="DATE ADDED">DATE ADDED</div>
+                            </th>
+                            <th  scope="col">
+                                <div class="table-header-label slds-align_absolute-center header-font" title="PRICE">PRICE</div>
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={columns} for:item="item" for:index="indexVar">
+                            <tr key={item.label}>
+                                <td>
+                                    <span style="display: inline-block; margin-right:10px;"><img src={item.image}></span>
+                                </td>
+                                <td>
+                                    <p class="product-name-rec">{item.label}</p>
+                                    <p class="product-font-rec">Size: <b>{item.size}</b></p>
+                                    <p class="product-font-rec">Color: <b>{item.color}</b></p>
+                                    <p class="product-font-rec">Item No: <b>{item.itemNo}</b></p>
+                                    <p class="stock-font-rec">{item.stock}</p>
+                                </td>
+                                <td>
+                                    <div class="slds-align_absolute-center quntity-font-rec">
+                                        {item.quantity}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="slds-align_absolute-center other-font-rec">
+                                        {item.dateAdded}
+                                    </div>
+                                </td>
+                                <td>
+                                    <p class="slds-align_absolute-center other-font-rec2">{item.price}</p>                                                                                   
+                                    <p style="text-decoration: line-through;" class="slds-align_absolute-center other-font-rec2">{item.discountPrice}</p>
+                                </td>
+                                <td>
+                                    <div class="slds-align_absolute-center other-font-rec">
+                                    <lightning-button-menu>
+                                        <lightning-menu-item value="change" label="Remove"></lightning-menu-item>
+                                        <lightning-menu-item value="changeBackground" label="Buy"></lightning-menu-item>
+                                    </lightning-button-menu>
+                                    </div>
+                                </td>
+
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </lightning-tab>
+            <lightning-tab label="BROWSE">
+                <table class="slds-table slds-table_bordered slds-max-medium-table_stacked-horizontal slds-table_fixed-layout">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th  scope="col">
+                                <div class="table-header-label slds-align_absolute-center header-font" title="PRODUCT">PRODUCT</div>
+                            </th>
+                            <th></th>
+                            <th  scope="col">
+                                <div class="table-header-label slds-align_absolute-center header-font" title="QUANTITY">QUANTITY</div>
+                            </th>
+                            <th  scope="col">
+                                <div class="table-header-label slds-align_absolute-center header-font" title="DATE ADDED">DATE ADDED</div>
+                            </th>
+                            <th  scope="col">
+                                <div class="table-header-label slds-align_absolute-center header-font" title="PRICE">PRICE</div>
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={columns} for:item="item" for:index="indexVar">
+                            <tr key={item.label}>
+                                <td>
+                                    <span style="display: inline-block; margin-right:10px;"><img src={item.image}></span>
+                                </td>
+                                <td>
+                                    <p class="product-name-rec">{item.label}</p>
+                                    <p class="product-font-rec">Size: <b>{item.size}</b></p>
+                                    <p class="product-font-rec">Color: <b>{item.color}</b></p>
+                                    <p class="product-font-rec">Item No: <b>{item.itemNo}</b></p>
+                                    <p class="stock-font-rec">{item.stock}</p>
+                                </td>
+                                <td>
+                                    <div class="slds-align_absolute-center quntity-font-rec">
+                                        {item.quantity}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="slds-align_absolute-center other-font-rec">
+                                        {item.dateAdded}
+                                    </div>
+                                </td>
+                                <td>
+                                    <p class="slds-align_absolute-center other-font-rec2">{item.price}</p>                                                                                   
+                                    <p style="text-decoration: line-through;" class="slds-align_absolute-center other-font-rec2">{item.discountPrice}</p>
+                                </td>
+                                <td>
+                                    <div class="slds-align_absolute-center other-font-rec">
+                                    <lightning-button-menu>
+                                        <lightning-menu-item value="change" label="Remove"></lightning-menu-item>
+                                        <lightning-menu-item value="changeBackground" label="Buy"></lightning-menu-item>
+                                    </lightning-button-menu>
+                                    </div>
+                                </td>
+
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </lightning-tab>
+        </lightning-tabset>
+    </div>
+</template>

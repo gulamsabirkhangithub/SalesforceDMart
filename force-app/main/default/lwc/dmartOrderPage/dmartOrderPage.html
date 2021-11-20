@@ -1,0 +1,99 @@
+<!--Page Name: dmartOrderPage.html
+    Created by : Gulam Sabir Khan
+    Date: 18-11-2021
+    Description: For D-Mart Mockup
+-->
+
+<template>
+    <div class="body-page">
+        <div class="slds-page-header">
+            <div class="slds-page-header__row">
+              <div class="slds-page-header__col-title">
+                <div class="slds-media">
+                  <div class="slds-media__figure">
+                    <lightning-icon  icon-name="standard:account"></lightning-icon >
+                  </div>
+                  <div class="slds-media__body">
+                    <div class="slds-page-header__name">
+                      <div class="slds-page-header__name-title">
+                        <h1>
+                          <span class="slds-page-header__title">
+                            Account
+                          </span>
+                        </h1>
+                      </div>
+                    </div>
+                    <p class="slds-page-header__name-meta">
+                        Dickenson plc
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="font-weight: bold;">
+            <lightning-combobox name="bookPrice" label="Select Price Book" value={filterValue} placeholder="Select"
+                            options={bookPriceOption} onchange={handleFilterChange}> </lightning-combobox>
+        </div><br/>            
+        <lightning-layout multiple-rows>
+            <lightning-layout-item  size="9">
+                <div class="slds-box" >
+                    <lightning-input type="search" label="Search Products"  
+                        onchange={handleSearch} value={searchValue} class="searchBox1"></lightning-input><br/>
+                    <lightning-layout multiple-rows horizontal-align="center">
+                        <template for:each={productList} for:item="item">
+                            <lightning-layout-item key={item.Product2.Id} size="12" small-device-size="6" medium-device-size="4"
+                                large-device-size="3">
+                                <c-product-list productdetail={item} onpassvalueorderpage={addToCart}></c-product-list>
+                            </lightning-layout-item>
+                        </template>
+                        <template if:true={noProductRecords}>
+                            <div class="slds-align_absolute-center"> Product records not found. </div>
+                        </template>
+                    </lightning-layout>
+                </div>
+            </lightning-layout-item>
+        
+            <lightning-layout-item  size="3">
+                <div class="slds-box" >
+                    <div class="bg-color">
+                        <lightning-button variant="brand" label="Place Order" title="Place Order" onclick={placeOrder} 
+                        disabled={noRecords} class="slds-m-left_x-small"></lightning-button>
+                    </div>
+                    <div>
+                        <span class="cart-text">Cart Items({totalItem})</span>
+                        <span class="cart-text" style="float:right">Total: ${totalPrice}.00</span>
+                    </div><br/><br/>
+
+                    
+                    <template for:each={productCartList} for:item="item">
+                        <div key={item.Product2.Id}>
+                        <div class="slds-box" key={item.Product2.Id}>
+                            <lightning-layout key={item.Product2.Id}>
+                                <lightning-layout-item size="4" >
+                                    <img src={item.Product2.DisplayUrl} class="product-icon"/>
+                                </lightning-layout-item>
+                                <lightning-layout-item size="8" >
+                                    <p class="text-p">{item.Product2.Name}</p>
+                                    <p class="price-text"><lightning-formatted-number value={item.UnitPrice} format-style="currency"
+                                        currency-code="USD"></lightning-formatted-number></p>
+                                    <p class="price-text">Qty:&nbsp;&nbsp;
+                                        <input type="text" name="quantity" value={item.Quantity} data-id={item.Id}
+                                        onchange={changeQuantityValue} class="quantity-box"/></p> </p>
+
+                                    <p class="product-cart-icon"><lightning-button-icon  icon-name="utility:delete" size="small" onclick={removeFromCart} data-value={item.Id}
+                                        data-id={item.Order.Id}></lightning-button-icon > </p>
+                                </lightning-layout-item>
+                            </lightning-layout>
+                        </div>
+                        </br>
+                        </div>
+                    </template>
+                    <template if:true={noRecords}>
+                        <div class="slds-align_absolute-center">No Items in Cart. </div>
+                    </template>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+</template>

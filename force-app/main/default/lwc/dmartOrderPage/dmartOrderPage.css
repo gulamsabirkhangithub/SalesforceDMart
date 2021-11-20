@@ -1,0 +1,48 @@
+.text-p {
+    font-size: 12px;
+    color: dodgerblue;
+    font-family: "Proxima Nova";
+}
+.cart-text{
+    font-weight: bold;
+    font-family: "Proxima Nova";
+}
+.price-text{
+    font-weight: bold;
+    font-family: "Proxima Nova";
+    font-size: 12px;
+}
+
+.quantity-box{
+    width: 60px;
+    height: 19px;
+    margin-top: 2px;
+}
+
+.product-icon{
+    height: 55px;
+    width: 60px;
+    border-radius: 15px;
+}
+
+.product-cart-icon{
+    margin-left: 140px;
+}
+
+.body-page{
+    margin-top: -36px;
+}
+
+.bg-color {
+    background-color: darkslateblue;
+    height: 33px;
+    margin-left: -16px;
+    margin-right: -16px;
+    margin-top: -17px;
+    text-align: center
+}
+.searchBox1 {
+    width: 45rem;
+    margin-left: 90px;
+    font-weight: bold;
+}

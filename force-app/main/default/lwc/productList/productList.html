@@ -1,0 +1,25 @@
+<!--Page Name: productList.html
+    Created by : Gulam Sabir Khan
+    Date: 18-11-2021
+    Description: For D-Mart Mockup
+-->
+<template>
+    <div class="slds-var-p-around_small">
+        <div class="slds-box">
+            <lightning-layout>
+                <lightning-layout-item size="4" class="slds-var-p-right_xx-small">
+                    <img src={productdetail.Product2.DisplayUrl} class="product-icon" />
+                </lightning-layout-item>
+                <lightning-layout-item size="8" class="slds-var-p-right_xx-small">
+                    <p class="product-font">{productdetail.Product2.Name}</p>
+                    <p class="product-font">{productdetail.Product2.ProductCode}</p>
+                    <p class="product-font"><lightning-formatted-number value={productdetail.UnitPrice} format-style="currency"
+                        currency-code="USD">
+                    </lightning-formatted-number></p>
+                    <p class="product-cart-icon"><lightning-button-icon  icon-name="utility:cart" size="small"  data-value={productdetail.Product2}
+                        data-id={productdetail} onclick={addCart}></lightning-button-icon > </p>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+    </div>
+</template>

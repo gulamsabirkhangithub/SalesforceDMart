@@ -1,0 +1,55 @@
+.profile-alignment {
+  border: 4px solid black;
+
+}
+
+.vl {
+  border-left: 1px solid gray;
+  height: 36px;
+}
+
+.profile_image{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    z-index: 1;
+    margin-top: -15px;
+    float: right;
+}
+
+.backround-image{
+  width: 100%;
+  /*height: 112px;*/
+  object-fit: cover;
+}
+
+.cont-name{
+    color: #444444;
+    font-family: "Proxima Nova";
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.cont-font-rec{
+  font-size: 14px;
+  font-family: "Proxima Nova";
+  color: #444444;
+}
+
+.slds-box {
+  margin-left: 10px;
+  margin-top: 25px;
+  margin-right: 10px;
+}
+
+
+.slds-progress-bar__value {
+    background: green !important;
+    width: 25%;
+}
+
+.slds-progress-bar {
+    height: 1rem !important;
+}

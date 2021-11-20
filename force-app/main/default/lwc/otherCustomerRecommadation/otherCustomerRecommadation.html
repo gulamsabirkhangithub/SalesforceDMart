@@ -1,0 +1,134 @@
+<!--Page Name: otherCustomerRecommadation.html
+    Created by : Gulam Sabir Khan
+    Date: 18-11-2021
+    Description: For D-Mart Mockup
+-->
+<template>
+    <div class="page-border">
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item size="12">
+                <img src={einsteinImg} class="est-image"/>
+                <br/>
+                <div class="product-rec">
+                    <lightning-icon icon-name="utility:new" size="xx-small"></lightning-icon> &nbsp;
+                     <span class="product-font-rec">Recommended Products</span>
+                </div><br/>
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col" style="text-align:right;">
+                        <img src={productImage1} style="height: 65px;width: 65px;"/>
+                    </div>
+                    <div class="slds-col">
+                        <p class="product-name-rec">Jacket Moss</p>
+                        <p class="product-text-rec">Size: <b>Medium</b></p>
+                        <p class="product-text-rec">Color: <b>Black</b></p>
+                        <p class="product-text-rec">Price: <b>$300</b></p>
+                    </div>
+                    <div class="slds-col">
+                        <lightning-button-menu>
+                            <lightning-menu-item value="change" label="Remove"></lightning-menu-item>
+                            <lightning-menu-item value="changeBackground" label="Buy"></lightning-menu-item>
+                        </lightning-button-menu>
+                    </div>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+        <br/>
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item size="12">
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col" style="text-align:right;">
+                        <img src={productImage2} style="height: 65px;width: 65px;"/>
+                    </div>
+                    <div class="slds-col">
+                        <p class="product-name-rec"> Moss Shoe</p>
+                        <p class="product-text-rec">Size: <b>8</b></p>
+                        <p class="product-text-rec">Color: <b>blue</b></p>
+                        <p class="product-text-rec">Price: <b>$400</b></p>
+                    </div>
+                    <div class="slds-col">
+                        <lightning-button-menu>
+                            <lightning-menu-item value="change" label="Remove"></lightning-menu-item>
+                            <lightning-menu-item value="changeBackground" label="Buy"></lightning-menu-item>
+                        </lightning-button-menu>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="more-pro">See More Recommendations</div>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+    <div class="page-border">
+        <lightning-layout>
+            <lightning-layout-item size="12">
+                <div class="case-rec">
+                    <lightning-icon icon-name="utility:chevronright" size="xx-small"></lightning-icon>
+                     <span class="product-font-rec"> Related Cases</span>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+        <div class="divider"></div>
+        <lightning-layout>
+            <lightning-layout-item size="12">
+                <div class="case-rec">
+                    <lightning-icon icon-name="utility:chevrondown" size="xx-small"></lightning-icon>
+                     <span class="product-font-rec"> Knowledge</span>
+                </div>
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_8-of-12" style="width: 185px;margin-left: 10px;">
+                        <lightning-input type="search" variant="label-hidden" placeholder="How to find product"></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_4-of-12">
+                        <lightning-button-icon icon-name="utility:filterList"></lightning-button-icon>
+                        <lightning-button-icon icon-name="utility:sort"></lightning-button-icon>
+                    </div>
+                </div>
+                <div class="know-text-rec">
+                    200+ Items .Sorted by Relevancy 
+                </div>
+                <div class="divider"></div>
+                <div class="know-list slds-truncate">Salesforce Products that can transform your business</div>
+                <div class="more2">
+                    ...Salesforce is the undisputed king of sales tech, best known for its CRM and AI-driven insights and sales automation tools.
+                </div>
+                <div class="more3">
+                    <ul class="slds-list_horizontal slds-has-dividers_left">
+                        <li class="slds-item">00000123</li>
+                        <li class="slds-item">Published</li>
+                        <li class="slds-item">How to guide</li>
+                      </ul>
+                </div>
+
+                <div class="divider"></div>
+                <div class="know-list slds-truncate">Salesforce Products</div>
+                <div class="more2">
+                    ...Salesforce is the undisputed king of sales tech, best known for its CRM and AI-driven insights and sales automation tools and 
+                    determine the capacity and Cloud Products that can transform your business and Cloud Products that can transform your business.
+                </div>
+                <div class="more3">
+                    <ul class="slds-list_horizontal slds-has-dividers_left">
+                        <li class="slds-item">00000124</li>
+                        <li class="slds-item">Published</li>
+                        <li class="slds-item">How to guide</li>
+                      </ul>
+                </div>
+
+                <div class="divider"></div>
+                <div class="know-list slds-truncate">Cloud Products that can transform your business</div>
+                <div class="more2">
+                    ...Salesforce is the undisputed king of sales tech, best known for its CRM and AI-driven insights and sales 
+                    automation tools and Salesforce Products that can transform your business.
+                </div>
+                <div class="more3">
+                    <ul class="slds-list_horizontal slds-has-dividers_left">
+                        <li class="slds-item">00000125</li>
+                        <li class="slds-item">Published</li>
+                        <li class="slds-item">How to guide</li>
+                      </ul>
+                </div>
+
+
+            </lightning-layout-item>
+        </lightning-layout>
+
+    </div>
+</template>
